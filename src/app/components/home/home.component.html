@@ -1,0 +1,12 @@
+<h1>My To-do List</h1>
+<ul>
+    @for (item of list; track item) {
+        <li>{{ item }}</li>
+    }
+</ul>
+
+<label for="new-task">New Task to add to the list</label>
+<input [(ngModel)]="newTask" id="new-task" type="text" placeholder="Type here a new task to add to the list">
+<button (click)="addNewTask()">Add Task</button>
+
+<p>{{ error }}</p>
